@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Make sure the PDF is white, not the dark gradient */
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+  }
+
+  /* This is the outer React div (className="print-page-bg") */
+  .print-page-bg {
+    background-color: #ffffff !important;
+    background-image: none !important; /* remove the gradient */
+  }
+}
+
